@@ -7,13 +7,20 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <style>
     body {
-      background: url('background.jpg') no-repeat center center fixed;
+      /* background: url('background.jpg') no-repeat center center fixed; */
+      background-color:rgb(65, 8, 118);
       background-size: cover;
       margin: 0;
       padding: 0;
       height: 100%;
     }
-
+    h1{
+      font-size: 50px;
+      display: flex;
+      justify-content: center;
+      color: white;
+      position: relative;
+    }
     .container {
       position: absolute;
       top: 50%;
@@ -28,7 +35,11 @@
       position: relative;
       /* max-width: 100%; Make sure images don't exceed the container width */
       height: auto; /* Maintain the aspect ratio */
-      margin-bottom: 15px;
+      margin: 5px;
+    }
+    button{
+      margin: 20px;
+      background-color: rgb(47, 7, 84);
     }
     .overlay {
       max-width: 100%;
@@ -37,7 +48,7 @@
       background: rgb(0, 0, 0);
       background: rgba(0, 0, 0, 0.5); /* Black see-through */
       color: #f1f1f1; 
-      width: 97%;
+      width: 96%;
       transition: .5s ease;
       opacity:0;
       color: white;
@@ -53,56 +64,73 @@
         transform: scale(1.3);
         transform-origin:top;
         margin: auto;
-        top: 0%;
+        top: 8%;
         left: 20%;
       }
 
       /* Adjust for phones */
       .thumbnail {
-        margin-top: 15px;
-        margin-bottom: 15px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      .bg-image{
+        margin-bottom: 0;
+        height: 225%;
       }
     }
   </style>
 </head>
 <body>
+  <h1>Gaming Options</h1>
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <img src="Screenshot (9).jpg" alt="Lights">
-          <div class="overlay">Game</div>
-      </div>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <img src="Screenshot (9).jpg" alt="Lights">
+        <button>
+          <div class="thumbnail">
+            <img src="Screenshot (9).jpg" alt="Lights">
             <div class="overlay">Game</div>
         </div>
+        </button>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <img src="Screenshot (9).jpg" alt="Lights">
+        <button>
+          <div class="thumbnail">
+            <img src="Screenshot (9).jpg" alt="Lights">
             <div class="overlay">Game</div>
         </div>
+        </button>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <img src="Screenshot (9).jpg" alt="Lights">
+        <button>
+          <div class="thumbnail">
+            <img src="Screenshot (9).jpg" alt="Lights">
             <div class="overlay">Game</div>
         </div>
+        </button>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <img src="Screenshot (9).jpg" alt="Lights">
+        <button>
+          <div class="thumbnail">
+            <img src="Screenshot (9).jpg" alt="Lights">
             <div class="overlay">Game</div>
         </div>
+        </button>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <img src="Screenshot (9).jpg" alt="Lights">
+        <button>
+          <div class="thumbnail">
+            <img src="Screenshot (9).jpg" alt="Lights">
             <div class="overlay">Game</div>
         </div>
+        </button>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <button>
+          <div class="thumbnail">
+            <img src="Screenshot (9).jpg" alt="Lights">
+            <div class="overlay">Game</div>
+        </div>
+        </button>
       </div>
     </div>
   </div>
