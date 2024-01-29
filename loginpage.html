@@ -2,12 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-    #fgpsw:hover{
-        color: blueviolet;
-    }
-</style>
+<title>Login page</title>
 <link rel="stylesheet" href="logstyle.css">
 </head>
 <body>
@@ -23,8 +18,8 @@
     <input type="text" placeholder="Username" name="uname" required>
 
     <label for="psw"></label>
-    <input type="password" placeholder="Password" name="psw" required>
-        
+    <input type="password" placeholder="Password" name="psw" id="myInput" required>
+    <input type="checkbox" onclick="myFunction()">Show Password    
     
     
   </div>
@@ -37,5 +32,6 @@
 </form>
 
 </div>
+<script src="logsign.js"></script>
 </body>
 </html>
