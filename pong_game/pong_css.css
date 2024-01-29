@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #222;
+    color: #fff;
+}
+
+.game-container {
+    position: relative;
+}
+
+.pong {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    border: 2px solid #fff;
+    overflow: hidden;
+}
+
+.ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: moveBall 2s infinite linear;
+}
+
+.paddle {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    background-color: #fff;
+}
+
+#leftPaddle {
+    left: 0;
+}
+
+#rightPaddle {
+    right: 0;
+}
+
+@keyframes moveBall {
+    0%, 100% {
+        top: 0;
+        left: 0;
+    }
+    50% {
+        top: 100%;
+        left: 100%;
+    }
+}
