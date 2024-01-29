@@ -4,6 +4,43 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sign Up page</title>
 <link rel="stylesheet" href="logstyle.css">
+<style>
+#message {
+  display:none;
+  /*background: #f1f1f1;*/
+  color: #000;
+  position: relative;
+  padding: 2px;
+  margin-top: 2px;
+}
+
+#message p {
+  padding: 2px 5px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: black;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: black;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
+</style>
 </head>
 <body>
 <div class="bg-image"></div>
@@ -18,14 +55,18 @@
     <input type="text" placeholder="Username" name="uname" required>
 
     <label for="psw"></label>
-    <input type="password" placeholder="Password" name="psw" required>
+    <input type="password" placeholder="Password" name="psw" id="myInput" pattern="(?=.*[!@#$%^&])(?=.*\d)(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase letter and a special character, and at least 8 or more characters" required>
+    <input type="checkbox" onclick="myFunction()">Show Password
         
     <label for="petname"></label>
-    <input type="text" placeholder="Petname(Alternative verification)" name="uname" required>
+    <input type="text" placeholder="Petname(Alternative verification)" name="pname" required>
 
-    <label for="psw"></label>
-    <input type="password" placeholder="Last School(Alternative verification)" name="psw" required>
+    <label for="lschool"></label>
+    <input type="text" placeholder="Last School(Alternative verification)" name="lschool" required>
     
+    <div id="message">
+      <p id="letter" class="invalid">Password is <b>Weak</b></p>
+    </div>
   </div>
 
   <div class="container">
@@ -36,5 +77,6 @@
 </form>
 
 </div>
+<script src="logsign.js"></script>
 </body>
 </html>
