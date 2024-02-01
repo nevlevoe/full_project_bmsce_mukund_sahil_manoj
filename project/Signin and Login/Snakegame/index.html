@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Snake Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="bg-image"></div>
+    <div id="main">
+        <div id="score">0</div> 
+        <h1>SNAKE GAME</h1> 
+         
+        <div id="instructions">
+            <p id="ins">
+                <h2 style="color: white;">Instructions</h2>
+                <ul style="color: white;">
+                    <li>Enter any key to start on game page</li>
+                    <li>Game ends when you collide with wall or yourself</li>
+                    <li>If food appears on body you game will still end if you eat</li>
+                </ul>
+                <br><br>
+            </p>
+            <p style="font-size: large;color: white;">
+            Select Mode</p>
+            <button class="startbut" id="starter" onclick="startgame(),setspeed1()">Normal</button>
+            <button class="startbut" id="starter2" onclick="startgame(),setspeed2()">Hard</button>
+        </div>
+        
+        <div id="gameboard"></div>
+        <br><br><br> 
+        
+        <button id="but"  onclick="resetgame()"> 
+            RESET 
+        </button>
+        <button id="retbut" onclick="returntogame()"> 
+            RETURN 
+        </button>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

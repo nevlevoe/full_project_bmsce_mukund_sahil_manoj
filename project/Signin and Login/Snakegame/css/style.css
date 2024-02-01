@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  .bg-image {
+    background-image: url("snakegame.png");
+    filter: blur(5px);
+    /* -webkit-filter: blur(5px); */
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+h1 { 
+	color:rgb(33, 3, 62); 
+	margin-bottom: -5px; 
+	border: 2px solid black;
+	border-radius: 30px;
+	background-color: rgb(237, 245, 245);
+
+}
+p{
+  margin-top: 0;
+}
+ul{
+padding: 0;
+}
+li{
+text-align: left;
+
+}
+#main { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+	text-align: center; 
+} 
+#score{
+    display: none;
+    margin: auto;
+    font-size: 30px;
+    color: greenyellow;
+    border: 2px solid white;
+    width: 80px;
+    padding: 10px;
+    background-color: black;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 5px;
+}
+#gameboard{
+    background: linear-gradient(rgb(24, 25, 24),rgb(100, 100, 91));
+    height: 60vmin;
+    width: 60vmin;
+    border: 3px solid black;
+    display: grid;
+    grid-template-rows: repeat(15, 1fr);
+    grid-template-columns: repeat(15,1fr);
+    display: none;
+    /* this splits the board into 12 rows and columns */
+}
+.snake{
+    background-color: rgb(10, 249, 10);
+    border: .25vmin solid rgb(26, 24, 24);
+    border-radius: 5px;
+}
+.food{
+    background-color: red;
+    border: .25vmin solid rgb(26, 24, 24);
+    border-radius: 5px;
+}
+.head{
+    background-color: rgb(149, 236, 19);
+    border: .25vmin solid rgb(26, 24, 24);
+    border-radius: 5px;
+    transform: scale(1.05);
+}
+.startbut{ 
+	box-sizing: border-box; 
+	width: 50%; 
+	height: 40px; 
+	border: 1px solid dodgerblue; 
+	margin-left: auto; 
+	border-radius: 8px; 
+	font-family: Verdana, 
+		Geneva, Tahoma, sans-serif; 
+
+	background-color: whitesmoke; 
+	color: dodgerblue; 
+	font-size: 20px; 
+	cursor: pointer; 
+	margin-bottom: 20px;
+  margin-top: 20px;
+}
+#ins { 
+	font-family: Verdana,Geneva, 
+					Tahoma, sans-serif; 
+}
+#but { 
+	display: none;
+	box-sizing: border-box; 
+	width: 40%; 
+	height: 40px; 
+	border: 1px solid dodgerblue; 
+	margin-left: 10px; 
+	border-radius: 8px; 
+	font-family: Verdana, 
+		Geneva, Tahoma, sans-serif; 
+
+	background-color: whitesmoke; 
+	color: dodgerblue; 
+	font-size: 20px; 
+	cursor: pointer; 
+} 
+#retbut{
+	display: none;
+	box-sizing: border-box; 
+	width: 40%; 
+	height: 40px; 
+	border: 1px solid dodgerblue; 
+	margin-left: 40px; 
+	border-radius: 8px; 
+	margin-top: -40px;
+	font-family: Verdana, 
+		Geneva, Tahoma, sans-serif; 
+
+	background-color: whitesmoke; 
+	color: dodgerblue; 
+	font-size: 20px; 
+	cursor: pointer; 
+	float: right;
+}

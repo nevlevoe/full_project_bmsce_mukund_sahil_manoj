@@ -1,0 +1,45 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+.bg-image {
+    background-image: url("background.jpg");
+    filter: blur(5px);
+    /* -webkit-filter: blur(5px); */
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+.bg-text {
+    background-color: rgba(0,0,0, 0.4); 
+    color: white;
+    font-weight: bold;
+    /* border: 3px solid #f1f1f1; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    /* sets the stack,i.e, which element is infront,more z-index more front */
+    width: 40%;
+    padding: 20px;
+    /* Difference b/w border and content */
+    text-align: center;
+}
+@media screen and (max-width: 300px) {
+  .bg-text{
+     width: 100%;
+  }
+}
+/* whenever we use fonts its better to keep 2 or 3 families
+browser chooses the one it supports */
+/* linear gradient can be used to have like lighting effects */
+/* margin border % is dynamic,i.e it fits according to window size */
