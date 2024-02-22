@@ -156,7 +156,19 @@ function update() {
     winmusic.play();
   }
 }
-
+function startgame(){
+  document.getElementById("canvas").style.display="block";
+  document.getElementById("start-game").style.display="none";
+  document.getElementById("ins").style.display="none";
+  document.getElementById("start-btn").style.display="block"
+  document.getElementById("pause-btn").style.display="block";
+  document.getElementById("restart-btn").style.display="block";
+  document.getElementById("return-btn").style.display="block";
+  
+}
+function gotoreturn(){
+  location.reload();
+}
 function playerWin(player) {
   var message = "Congratulations! " + player + " win!";
   $('#message').text(message); // Set the message text

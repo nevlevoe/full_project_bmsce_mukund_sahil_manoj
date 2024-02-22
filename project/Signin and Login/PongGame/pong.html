@@ -19,15 +19,17 @@
   <div class="bg-image"></div>
   <div id="main">
     <h1>PONG</h1>
-    <p class="control" style="background-color: whitesmoke;font-weight: bolder;margin-top: 20px;">Control: Player Left(W and S) | Player Right(↑ and ↓)
+    <p id="ins" class="control" style="background-color: whitesmoke;font-weight: bolder;margin-top: 20px;">Control: Player Left(W and S) | Player Right(↑ and ↓)
       <br>First Player to score 10 points wins</p>
+      <button id="start-game" class="btn" onclick="startgame()">START GAME</button>
     <div class="container">
       <canvas id="canvas" width="600" height="400"></canvas>
     </div>
     <div class="button">
-      <button id="start-btn" class="btn">Start</button>
-        <button id="pause-btn" class="btn">Pause</button>
-        <button id="restart-btn" class="btn">Restart</button>
+      <button id="start-btn" style="display: none;" class="btn">Start</button>
+        <button id="pause-btn" style="display: none;" class="btn">Pause</button>
+        <button id="restart-btn" style="display: none;" class="btn">Restart</button>
+        <button id="return-btn" style="display: none;" class="btn" onclick="gotoreturn()">Return</button>
       </div>
      
     </div>

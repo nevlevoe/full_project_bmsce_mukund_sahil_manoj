@@ -9,6 +9,9 @@ function startgame(){
 	document.getElementById("instructions").style.display="none"
 	document.getElementById("gameboard").style.marginTop="30px"
 }
+function gotogamepage(){
+	window.location.href="../gamepage.html"
+}
 function returntogame(){
 	location.reload();
 	// document.getElementById("startbut").style.display="block"

@@ -23,6 +23,9 @@ function main(ctime){
     lastPaint=ctime;
     gameEngine();
 }
+function gotogamepage(){
+    window.location.href="../gamepage.html";
+}
 function setspeed1(){
     speed=5;
 }
