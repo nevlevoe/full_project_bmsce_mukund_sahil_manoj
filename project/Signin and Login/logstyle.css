@@ -43,12 +43,12 @@ input[type=text], input[type=password] {
   border: 1px solid white;
   border-radius: 30px;
   box-sizing: border-box;
-  
 }
 
 button {
-  background-color: #e90ed3;
-  color: white;
+  background-color: #41f40a;
+  color: black;
+  font-weight: bold;
   padding: 14px 20px;
   float: left;
   margin-top: 2%;
@@ -64,7 +64,6 @@ button:hover {
 
 .cancelbtn {
   margin-left: 20%;
-  background-color: #f40a58;
 }
 
 .imgcontainer {

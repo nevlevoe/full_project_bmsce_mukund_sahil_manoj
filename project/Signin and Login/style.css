@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 body, html {
   height: 100%;
   margin: 0;
@@ -36,8 +37,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 
 button {
-  background-color: #f40a58;
-  color: white;
+  background-color: #41f40a;
+  color: rgb(2, 0, 0);
+  font-weight: bold;
   padding: 14px 20px;
   float: left;
   margin-top: 2%;
@@ -52,14 +54,9 @@ button:hover {
   opacity: 0.8;
 }
 
-.cancelbtn {
-  margin-left: 20%;
-  background-color: #f40a58;
-}
-
-
 .container {
   display: flex;
+  justify-content: center;
   padding: 10px;
 }
 
@@ -67,7 +64,11 @@ span.psw {
   float: right;
   padding-top: 16px;
 }
-
+h1{
+  font-family: 'Orbitron', sans-serif;
+  color: greenyellow;
+  font-size: 60px;
+}
 
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
@@ -85,3 +86,38 @@ span.psw {
   }
 }
 
+/* Add this CSS to style the navbar */
+
+.navbar {
+  overflow: hidden;
+  background: linear-gradient(rgb(6, 100, 6),black);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  border: 1px solid black;
+  border-radius: 30px;
+  margin-top: 20px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  }
+
+.a {
+  float: right;
+  display:inline;
+  color: #090909;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 10px;
+}
+
+.navbar a:hover {
+  background-color: green;
+}
+
+.active {
+  background-color: green;
+}

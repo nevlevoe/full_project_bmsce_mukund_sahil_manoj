@@ -4,7 +4,7 @@ var ctx = canvas.getContext("2d");
 
 var startBtn = document.getElementById("start-btn");
 var pauseBtn = document.getElementById("pause-btn");
-var restartBtn = document.getElementById("restart-btn");
+//var restartBtn = document.getElementById("restart-btn");
 var animationId;
 var gameRunning = false;
 ballhit=new Audio("ballhit.mp3");
@@ -22,9 +22,9 @@ pauseBtn.addEventListener("click", function() {
   cancelAnimationFrame(animationId);
 });
 
-restartBtn.addEventListener("click", function() {
-  document.location.reload();
-});
+// restartBtn.addEventListener("click", function() {
+//   document.location.reload();
+// });
 
 addEventListener("load", (event) => {
   draw();
@@ -160,14 +160,18 @@ function startgame(){
   document.getElementById("canvas").style.display="block";
   document.getElementById("start-game").style.display="none";
   document.getElementById("ins").style.display="none";
+  document.getElementById("gamepanel").style.display="none";
   document.getElementById("start-btn").style.display="block"
   document.getElementById("pause-btn").style.display="block";
-  document.getElementById("restart-btn").style.display="block";
+  //document.getElementById("restart-btn").style.display="block";
   document.getElementById("return-btn").style.display="block";
   
 }
 function gotoreturn(){
   location.reload();
+}
+function gotogamepage(){
+  window.location.href="../gamepage.html"
 }
 function playerWin(player) {
   var message = "Congratulations! " + player + " win!";

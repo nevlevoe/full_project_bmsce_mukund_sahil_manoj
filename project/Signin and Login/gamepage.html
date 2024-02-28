@@ -25,13 +25,7 @@
     background-size: cover;
     -webkit-background-size: cover;
 }
-    h1{
-      font-size: 50px;
-      display: flex;
-      justify-content: center;
-      color: white;
-      position: relative;
-    }
+
     .container {
       position: absolute;
       top: 50%;
@@ -70,6 +64,21 @@
     .thumbnail:hover .overlay {
   opacity: 1;
 }
+.but { 
+	box-sizing: border-box; 
+	width: 40%; 
+	height: 40px; 
+	border: 1px solid dodgerblue; 
+	margin-left: 10px; 
+	border-radius: 8px; 
+	font-family: Verdana, 
+		Geneva, Tahoma, sans-serif; 
+
+	background-color: whitesmoke; 
+	color: dodgerblue; 
+	font-size: 20px; 
+	cursor: pointer; 
+} 
     @media (max-width: 600px) {
       .container{
         transform: scale(1.3);
@@ -86,18 +95,17 @@
       }
       .bg-image{
         margin-bottom: 0;
-        height: 225%;
+        height: 120%;
       }
     }
   </style>
 </head>
 <body>
   
-  
   <div class="bg-image"></div>
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="col-xs-12 col-sm-4 col-md-4">
         <button id="tictactoegame" onclick="gotopage()">
           <div class="thumbnail">
             <img src="cover_page.png" alt="Lights">
@@ -105,7 +113,7 @@
         </div>
         </button>
       </div>
-      <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="col-xs-12 col-sm-4 col-md-4">
         <button id="ponggame" onclick="gotopage3()">
           <div class="thumbnail">
             <img src="pong-game-card.jpg" alt="Lights">
@@ -113,7 +121,7 @@
         </div>
         </button>
       </div>
-      <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="col-xs-12 col-sm-4 col-md-4">
         <button id="snakegame" onclick="gotopage2()">
           <div class="thumbnail">
             <img src="snakegame.jpg" alt="Lights">
@@ -121,33 +129,14 @@
         </div>
         </button>
       </div>
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <button onclick="getalert()">
-          <div class="thumbnail">
-            <img src="x_img2.jpg" alt="Lights">
-            <div class="overlay">Unavailable</div>
-        </div>
-        </button>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <button onclick="getalert()">
-          <div class="thumbnail">
-            <img src="x_img2.jpg" alt="Lights">
-            <div class="overlay">Unavailable</div>
-        </div>
-        </button>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <button onclick="getalert()">
-          <div class="thumbnail">
-            <img src="x_img2.jpg" alt="Lights">
-            <div class="overlay">Unavailable</div>
-        </div>
-        </button>
-      </div>
+     
     </div>
+    <button class="but" onclick="gohome()">HOME</button>
   </div>
   <script>
+    function gohome(){
+      window.location.href="index.html"
+    }
     function gotopage(){
       window.location.href="tictactoe/index.html"
     }

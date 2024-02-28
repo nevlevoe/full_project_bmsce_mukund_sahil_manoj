@@ -116,33 +116,36 @@ function startgame(){
     document.getElementById("score").style.display="block";
     document.getElementById("but").style.display="block";
     document.getElementById("retbut").style.display="block";
+    get_events()
 }
 
 //main logic
 window.requestAnimationFrame(main)
 //whenever a key is clicked arrow function is launched
-window.addEventListener('keydown',e=>{
-    bgscore.play()
-    inputDir={x:0,y:1}//start the game
-    switch (e.key) {
-        case "ArrowUp":
-            inputDir.x=0;
-            inputDir.y=-1;
-            break;
-        case "ArrowDown":
-            inputDir.x=0;
-            inputDir.y=1;
-            break;
-        case "ArrowLeft":
-            inputDir.x=-1;
-            inputDir.y=0;
-            break;
-        case "ArrowRight":
-            inputDir.x=1;
-            inputDir.y=0;
-            break;
-    
-        default:
-            break;
-    }
-})
+function get_events(){
+    window.addEventListener('keydown',e=>{
+        bgscore.play()
+        inputDir={x:0,y:1}//start the game
+        switch (e.key) {
+            case "ArrowUp":
+                inputDir.x=0;
+                inputDir.y=-1;
+                break;
+            case "ArrowDown":
+                inputDir.x=0;
+                inputDir.y=1;
+                break;
+            case "ArrowLeft":
+                inputDir.x=-1;
+                inputDir.y=0;
+                break;
+            case "ArrowRight":
+                inputDir.x=1;
+                inputDir.y=0;
+                break;
+        
+            default:
+                break;
+        }
+    })
+}
