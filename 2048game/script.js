@@ -5,6 +5,12 @@ let r1 = [
     ['', '', '', ''],
     ['', '', '', '']
 ];
+let r2 = [
+    ['', '', '', ''],
+    ['', '', '', ''],
+    ['', '', '', ''],
+    ['', '', '', '']
+];
 var num_col_hex = [
     "red",
     "green",
@@ -131,7 +137,7 @@ function mover(l, rc, d) {
 function isOver() {
     for(let i=0;i<4;i++){
         for(let j=0;j<4;j++)
-            r1[i][j]=r2[i][j];
+            r2[i][j]=r1[i][j];
     }
     adder(r2,'r',-1)
     mover(r2,'r',-1)
@@ -143,7 +149,7 @@ function isOver() {
     mover(r2,'c',1)
     for(let i=0;i<4;i++){
         for(let j=0;j<4;j++)
-            if(r1[i][j]!==r2[i][j])
+            if(r1[i][j]!==r2[i][j]||r1[i][j]==='')
                 return 0;
     }
     return 1;
@@ -152,8 +158,10 @@ function isOver() {
 function isWon() {
     for(let i=0;i<4;i++){
         for(let j=0;j<4;j++)
-            if(r1[i][j]===2048)
+            if(r1[i][j]===2048){
                 return 1;
+            }
+
     }
     return 0;
 }
@@ -211,10 +219,23 @@ function getgame(){
             rangen(1)
             update_panel()
         }
+        else{
+            return;
+        }
+        
         score+=s;
         document.getElementById("score").innerHTML=score;
+
     });
 }
+function displayMessage(message) {
+    // Display the message on the webpage
+    const messageElement = document.getElementById('game-message');
+    messageElement.innerText = message;
+    messageElement.style.display = 'block';
+}
+
+
 
 // Function to update the game board display
 function update_panel() {
@@ -273,9 +294,14 @@ function update_panel() {
     document.getElementById("b16").innerHTML=r1[3][3];
     document.getElementById("b16").style.color=num_col_hex[getpower(r1[3][3])];
     document.getElementById("b16").style.borderColor=num_col_hex[getpower(r1[3][3])];
-
+    if (isWon()) {
+        displayMessage("You Won!!!");
+    } else if (isOver()) {
+        displayMessage("Game Over!!!");
+    }
+    
 }
 
 // Initialize the game board and display
 
-updatePanel();
+update_panel();
