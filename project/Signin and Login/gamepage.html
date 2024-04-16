@@ -105,7 +105,7 @@
   <div class="bg-image"></div>
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-sm-4 col-md-4">
+      <div class="col-xs-10 col-sm-6 col-md-4">
         <button id="tictactoegame" onclick="gotopage()">
           <div class="thumbnail">
             <img src="cover_page.png" alt="Lights">
@@ -113,7 +113,7 @@
         </div>
         </button>
       </div>
-      <div class="col-xs-12 col-sm-4 col-md-4">
+      <div class="col-xs-10 col-sm-6 col-md-4">
         <button id="ponggame" onclick="gotopage3()">
           <div class="thumbnail">
             <img src="pong-game-card.jpg" alt="Lights">
@@ -121,7 +121,7 @@
         </div>
         </button>
       </div>
-      <div class="col-xs-12 col-sm-4 col-md-4">
+      <div class="col-xs-10 col-sm-6 col-md-4">
         <button id="snakegame" onclick="gotopage2()">
           <div class="thumbnail">
             <img src="snakegame.jpg" alt="Lights">
@@ -129,7 +129,14 @@
         </div>
         </button>
       </div>
-     
+      <div class="col-xs-10 col-sm-6 col-md-4">
+        <button id="snakegame" onclick="gotopage4()">
+          <div class="thumbnail">
+            <img src="2048game.png" alt="Lights">
+            <div class="overlay">2048</div>
+        </div>
+        </button>
+      </div>
     </div>
     <button class="but" onclick="gohome()">HOME</button>
   </div>
@@ -146,8 +153,8 @@
     function gotopage3(){
       window.location.href="PongGame/pong.html"
     }
-    function getalert(){
-      alert("Game is under construction not available at the moment!!");
+    function gotopage4(){
+      window.location.href="2048game/index.html"
     }
   </script>
 </body>
