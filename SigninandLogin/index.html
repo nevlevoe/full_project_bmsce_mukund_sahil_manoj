@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="style.css">
+ <title>Basic Interface</title>
+</head>
+<body>
+  <div class="navbar">
+    <button type="button" onclick="directtogamepage()" class="a">GUESTMODE</a>
+    <button type="button" class="a" onclick="directtoleaderboard()" style="padding-left: 10px;">LEADERBOARD</a>
+    <button type="button" class="a" onclick="gotoabout()">ABOUT</a>
+  </div>
+  <div class="bg-image"></div>
+  <div class="bg-text">
+      <form action="" method="post">
+      <h1>M3 ARCADE</h1>
+  
+    <div class="container">
+      <button type="button"  onclick="directtologin()">LOGIN</button>
+      <button type="button" onclick="directtosignup()">SIGN UP</button>
+    </div>
+  </form>
+  
+  </div>
+<script>
+  function directtogamepage(){
+    window.location.href="gamepage.html"
+  }
+  function directtologin(){
+    window.location.href="login"
+  }
+  function directtosignup(){
+    window.location.href="signup"
+  }
+  function gotoabout(){
+    window.location.href='aboutpage.html'
+  }
+</script>
+</body>
+</html>
